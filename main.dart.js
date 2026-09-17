@@ -98224,7 +98224,7 @@ break}n.X(new A.azX(n))
 p=4
 m=A.cu(J.zk(d,"http://")||J.zk(d,"https://")?d:"https://"+A.l(d),0,null)
 h=$.iB
-l=A.cu((h==null?"http://192.168.122.29:3000":h)+"/extract-image",0,null)
+l=A.cu((h==null?"https://keep-backend-rlxt.onrender.com":h)+"/extract-image",0,null)
 h=t.N
 g=A.aq(["Content-Type","application/json"],h,h)
 s=7
@@ -98348,7 +98348,7 @@ var $async$zE=A.r(function(a,b){if(a===1){p.push(b)
 s=q}for(;;)switch(s){case 0:q=3
 o.X(new A.aA2(o))
 j=$.iB
-n=A.cu((j==null?"http://192.168.122.29:3000":j)+"/process-missing-images",0,null)
+n=A.cu((j==null?"https://keep-backend-rlxt.onrender.com":j)+"/process-missing-images",0,null)
 j=t.N
 s=6
 return A.n(A.li(n,null,A.aq(["Content-Type","application/json"],j,j)),$async$zE)
@@ -98378,7 +98378,7 @@ s=q}for(;;)switch(s){case 0:q=3
 o.X(new A.aA_(o))
 A.b3("\u0628\u062f\u0621 \u0645\u0639\u0627\u0644\u062c\u0629 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a...")
 e=$.iB
-n=A.cu((e==null?"http://192.168.122.29:3000":e)+"/process-data-to-json",0,null)
+n=A.cu((e==null?"https://keep-backend-rlxt.onrender.com":e)+"/process-data-to-json",0,null)
 A.b3("\u0625\u0631\u0633\u0627\u0644 \u0637\u0644\u0628 \u0625\u0644\u0649: "+A.l(n))
 e=t.N
 s=6
@@ -98494,7 +98494,7 @@ break}m.X(new A.azV(m))
 p=4
 l=A.cu(J.zk(c,"http://")||J.zk(c,"https://")?c:"https://"+A.l(c),0,null)
 f=$.iB
-k=A.cu((f==null?"http://192.168.122.29:3000":f)+"/download-video",0,null)
+k=A.cu((f==null?"https://keep-backend-rlxt.onrender.com":f)+"/download-video",0,null)
 f=t.N
 e=A.aq(["Content-Type","application/json"],f,f)
 s=7
@@ -98554,7 +98554,7 @@ A.b3("Image selected: "+b)
 A.b3("Image size: "+J.bd(k)+" bytes")
 A.b3("Public ID: "+A.l(n.as))
 b=$.iB
-g=A.cu((b==null?"http://192.168.122.29:3000":b)+"/replace-image",0,null)
+g=A.cu((b==null?"https://keep-backend-rlxt.onrender.com":b)+"/replace-image",0,null)
 b=t.N
 a=A.aq(["Content-Type","application/json"],b,b)
 s=9
@@ -98592,7 +98592,7 @@ s=1
 break}n.X(new A.aAc(n))
 p=4
 h=$.iB
-m=A.cu((h==null?"http://192.168.122.29:3000":h)+"/take-screenshot",0,null)
+m=A.cu((h==null?"https://keep-backend-rlxt.onrender.com":h)+"/take-screenshot",0,null)
 h=t.N
 g=A.aq(["Content-Type","application/json"],h,h)
 s=7
@@ -98642,7 +98642,7 @@ A.b3("Cropped image size: "+J.bd(l)+" bytes")
 A.b3("Old image URL: "+A.l(n.f))
 A.b3("Public ID: "+A.l(n.as))
 b=$.iB
-i=A.cu((b==null?"http://192.168.122.29:3000":b)+"/replace-image",0,null)
+i=A.cu((b==null?"https://keep-backend-rlxt.onrender.com":b)+"/replace-image",0,null)
 b=t.N
 a=A.aq(["Content-Type","application/json"],b,b)
 s=8
