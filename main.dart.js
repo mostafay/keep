@@ -97076,7 +97076,7 @@ abb(a){var s=0,r=A.w(t.H),q=1,p=[],o,n,m,l,k,j,i
 var $async$yL=A.r(function(b,c){if(b===1){p.push(c)
 s=q}for(;;)switch(s){case 0:q=3
 m=$.iB
-m=A.cu((m==null?"http://192.168.8.29:3000":m)+"/delete-image",0,null)
+m=A.cu((m==null?"https://keep-backend-rlxt.onrender.com":m)+"/delete-image",0,null)
 l=t.N
 k=A.aq(["Content-Type","application/json"],l,l)
 s=6
@@ -97184,7 +97184,7 @@ h="data:image/"+A.l(i)+";base64,"+A.l(j)
 g=J.as(n.a.c,a3)
 f=J.fM(n.a.f)?J.as(n.a.f,a3):""
 a=$.iB
-e=A.cu((a==null?"http://192.168.8.29:3000":a)+"/replace-image",0,null)
+e=A.cu((a==null?"https://keep-backend-rlxt.onrender.com":a)+"/replace-image",0,null)
 a=t.N
 a0=A.aq(["Content-Type","application/json"],a,a)
 s=9
@@ -97221,7 +97221,7 @@ s=1
 break}b.$1(new A.avP(n))
 p=4
 h=$.iB
-m=A.cu((h==null?"http://192.168.8.29:3000":h)+"/take-screenshot",0,null)
+m=A.cu((h==null?"https://keep-backend-rlxt.onrender.com":h)+"/take-screenshot",0,null)
 h=t.N
 g=A.aq(["Content-Type","application/json"],h,h)
 s=7
@@ -97280,7 +97280,7 @@ A.b3("Old image URL: "+A.l(f))
 A.b3("URL: "+A.l(e))
 A.b3("Data URL length: "+J.bd(g))
 a0=$.iB
-d=A.cu((a0==null?"http://192.168.8.29:3000":a0)+"/replace-image",0,null)
+d=A.cu((a0==null?"https://keep-backend-rlxt.onrender.com":a0)+"/replace-image",0,null)
 A.b3("API URI: "+A.l(d))
 A.b3("Sending request...")
 p=10
