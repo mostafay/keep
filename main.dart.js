@@ -94562,9 +94562,10 @@ s+=q.Q?1:0
 return new A.bZ(B.oa,new A.NN(new A.amA(300,8,8,110+50*p),new A.amv(new A.auL(q),s,!0,!0,!0,r),r,B.aC,!1,q.as,r,r,!1,r,r,s,B.V,r,r,B.o,B.aF,r),r)},
 $S:604}
 A.auL.prototype={
-$2(a,b){var s=this.a,r=s.d
-if(b===r.length&&s.Q)return B.cI
-return new A.Up(b,r[b],s.f.A(0,b),s.r,new A.auK(s,b),s.gajB(),s.gahT(),null)},
+$2(a,b){var s,r=this.a,q=r.d,p=q.length
+if(b===p&&r.Q)return B.cI
+s=p-1-b
+return new A.Up(s,q[s],r.f.A(0,s),r.r,new A.auK(r,s),r.gajB(),r.gahT(),null)},
 $S:605}
 A.auK.prototype={
 $0(){var s,r,q,p,o=this.a,n=this.b,m=o.d[n],l=J.aB(m),k=t.Xb,j=k.a(l.h(m,"images"))
