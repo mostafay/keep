@@ -2,8 +2,7 @@ name: Deploy Flutter Web to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -15,54 +14,62 @@ concurrency:
   group: github-pages
   cancel-in-progress: true
 
+env:
+  FLUTTER_VERSION: '3.35.4'
+
 jobs:
   build:
+    name: Build Flutter web app
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
-      - name: Setup Flutter
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
+          flutter-version: ${{ env.FLUTTER_VERSION }}
           channel: stable
+          cache: true
 
       - name: Get dependencies
         run: flutter pub get
 
-      - name: Build Flutter Web
-        run: flutter build web --release
+      - name: Build Flutter web app
+        env:
+          BASE_HREF: ${{ steps.pages.outputs.base_path }}
+        run: flutter build web --release --base-href "${BASE_HREF:-/}"
 
-      - name: Verify build
+      - name: Validate Pages artifact
         run: |
-          test -f build/web/index.html
-          echo "Flutter Web build verified"
+          set -euo pipefail
+          test -s build/web/index.html
+          test -f build/web/flutter_bootstrap.js || test -f build/web/flutter.js
           du -sh build/web
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: build/web
 
   deploy:
+    name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
-
-    permissions:
-      pages: write
-      id-token: write
+    timeout-minutes: 30
 
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy Pages artifact
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
         with:
           timeout: 1800000
