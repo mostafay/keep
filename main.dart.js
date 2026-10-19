@@ -93436,7 +93436,7 @@ r=q.y
 r.toString
 s=B.j.eh(new A.eQ(s,0,!1).fw(r).a,1e6)
 if(s>=60&&!q.z)if(q.c!=null)q.N(new A.au_(q))
-if(s>=120){a.aC(0)
+if(s>=500){a.aC(0)
 if(q.c!=null){q.a.d.$0()
 q=q.c
 q.toString
